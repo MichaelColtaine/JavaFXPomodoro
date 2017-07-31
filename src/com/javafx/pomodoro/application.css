@@ -1,0 +1,30 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+
+
+
+.button {
+     -fx-background-color: 
+        #3c7fb1,
+        linear-gradient(#fafdfe, #e8f5fc),
+        linear-gradient(#eaf6fd 0.0%, #d9f0fc 49.0%, #bee6fd 50.0%, #a7d9f5 100.0%);
+    -fx-background-insets: 0.0,1.0,2.0;
+    -fx-text-fill: black;
+    -fx-font-size: 14.0px;
+    -fx-pref-height: 25.0px;
+    -fx-pref-width: 88.0px;
+}
+
+
+.toggle-button {
+     -fx-background-color: 
+        #3c7fb1,
+        linear-gradient(#fafdfe, #e8f5fc),
+        linear-gradient(#eaf6fd 0.0%, #d9f0fc 49.0%, #bee6fd 50.0%, #a7d9f5 100.0%);
+    -fx-background-insets: 0.0,1.0,2.0;
+    -fx-text-fill: black;
+    -fx-font-size: 14.0px;
+    -fx-pref-height: 25.0px;
+    -fx-pref-width: 88.0px;
+}
+

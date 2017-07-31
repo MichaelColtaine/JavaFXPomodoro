@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="300.0" prefWidth="250.0" stylesheets="@application.css"
+	xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="com.javafx.pomodoro.Controller">
+
+
+
+	<top>
+		<MenuBar prefHeight="0.0" prefWidth="469.0"
+			BorderPane.alignment="CENTER">
+			<menus>
+				<Menu mnemonicParsing="true" text="_File">
+					<MenuItem fx:id="restartMenuItem" accelerator="Shortcut+R"
+						mnemonicParsing="true" onAction="#onRestart" text="_Restart" />
+					<MenuItem fx:id="startMenuItem" accelerator="Shortcut+S"
+						mnemonicParsing="true" onAction="#onStart" text="_Start/Stop" />
+					<MenuItem fx:id="muteMenuItem" accelerator="Shortcut+M"
+						mnemonicParsing="true" onAction="#onMute" text="_Mute" />
+					<SeparatorMenuItem />
+					<MenuItem fx:id="exitMenuItem" accelerator="Shortcut+X"
+						mnemonicParsing="true" onAction="#onExit" text="E_xit" />
+				</Menu>
+			</menus>
+		</MenuBar>
+	</top>
+
+
+
+	<center>
+		<VBox alignment="CENTER" prefHeight="203.0" prefWidth="425.0"
+			BorderPane.alignment="CENTER">
+			<children>
+				<HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0"
+					spacing="5">
+					<children>
+						<RadioButton fx:id="longRadioButton" mnemonicParsing="true"
+							onAction="#onSelectedRadioButotn" selected="true" text="25 minu_tes">
+							<toggleGroup>
+								<ToggleGroup fx:id="radioButtonsGroup" />
+							</toggleGroup>
+						</RadioButton>
+						<RadioButton fx:id="shortRadioButton" mnemonicParsing="true"
+							onAction="#onSelectedRadioButotn" text="5 minut_es" toggleGroup="$radioButtonsGroup" />
+					</children>
+				</HBox>
+				<Label fx:id="time" text="25 : 00">
+					<font>
+						<Font size="60.0" />
+					</font>
+				</Label>
+			</children>
+		</VBox>
+	</center>
+
+
+
+	<bottom>
+		<HBox alignment="CENTER" prefHeight="100.0" prefWidth="423.0"
+			spacing="5.0" BorderPane.alignment="CENTER">
+			<children>
+				<ToggleButton fx:id="startBtn" onAction="#onStart"
+					text="_Start" mnemonicParsing="true" />
+				<Button fx:id="restartBtn" onAction="#onRestart" text="_Restart"
+					mnemonicParsing="true" />
+				<Button fx:id="muteBtn" disable="true" mnemonicParsing="true"
+					onAction="#onMute" text="_Mute" />
+			</children>
+			<padding>
+				<Insets left="20.0" right="20.0" />
+			</padding>
+		</HBox>
+	</bottom>
+
+
+
+</BorderPane>
